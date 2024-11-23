@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Tuts+ Chat Application</title>
+        <meta name="description" content="Tuts+ Chat Application" />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            input{
+            position:relative;
+            bottom: 50px; left: 540px;
+            }
+            button{
+                position:relative;
+                bottom: 50px; left: 540px;
+            }
+            p{
+                position:relative;
+                bottom: 400px; left: 400px;
+            }
+        </style>
+        
+        
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <p class="welcome">Welcome, <b></b></p>
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            </div>
+            <div id="chatbox"></div>
+            <form name="message" action="">
+                <!--<input name="usermsg" type="text" id="usermsg" />
+                <button onclick="msgSent()">Send</button>-->
+            </form>
+        </div>
+
+        <!--<p id="output"></p>-->
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            // jQuery Document 
+            $(document).ready(function () {});
+        </script>
+
+
+
+
+
+
+        <input type="text" id="userInput" placeholder="Enter something">
+        <button onclick="storeInput()">Submit</button>
+        <p id="output"></p>
+
+
+
+        <div id="container"></div>
+    <button onclick="addParagraph()">Add Paragraph</button>
+
+    
+        <script>
+            function storeInput() {
+                // Get the value from the textbox
+                var input = document.getElementById("userInput").value;
+                // Display the value in the paragraph
+                //output = document.getElementById("output").innerText = "You: " + input;
+            // Create a new <p> element
+            const para = document.createElement("p");
+            // Add text to the <p> element
+            para.innerText = output = document.getElementById("output").innerText = "You: " + input;
+            // Append the <p> element to the container div
+            document.getElementById("container").appendChild(para);
+
+            }
+        </script>
+    </body>
+</html>
